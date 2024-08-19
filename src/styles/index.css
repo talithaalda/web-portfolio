@@ -1,0 +1,176 @@
+@import "./fonts.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base-color: #0c1526;
+  --pink-primer: #e950de;
+  --pink-pale: #e3b2ef;
+}
+
+body {
+  font-family: "Neometric Regular", sans-serif;
+  background-color: var(--base-color);
+}
+
+.custom-underline {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  height: 3px;
+  width: 0%;
+  background-color: var(--pink-primer);
+  transition: width 0.3s ease-in-out;
+}
+
+.custom-underline:hover::after {
+  width: 30%;
+  color: var(--pink-primer);
+}
+.nav-active {
+  font-weight: bold; /* Optional: make active link bold */
+  color: var(--pink-primer); /* Change text color to indicate active state */
+}
+
+.nav-active::after {
+  width: 30%; /* Extend the underline to full width for active link */
+}
+
+/* Optional: Style for hover state of active link */
+
+.button-1 {
+  background: linear-gradient(to bottom, transparent, #a31ad1);
+  background-opacity: 0.5;
+  border: 0.1px solid #9b4da0;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button-1:hover {
+  background-color: #d8a1de; /* Adjust hover background color */
+  box-shadow: 0 0 20px 5px #a31ad1; /* Pink glow effect */
+  transform: translateY(-5px); /* Raised effect */
+}
+.glow-effect {
+  /* border: 0.1px solid #9b4da0; */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 20px 5px #a31ad1; /* Pink glow effect */
+  transform: translateY(-5px) !important; /* Raised effect */
+}
+
+.cat-active {
+  position: relative;
+  color: var(--pink-primer); /* Purple text color */
+  font-weight: bold; /* Optional: to make it stand out */
+}
+
+.cat-active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adjusts position of the underline */
+  left: 0;
+  width: 100% !important;
+  height: 3px;
+  background-color: var(--pink-primer); /* Purple underline color */
+  transform-origin: bottom left;
+}
+
+.cat-item {
+  position: relative;
+  padding: 5px 0; /* Adjust spacing if needed */
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+.cat-item:hover {
+  position: relative;
+  color: var(--pink-primer); /* Purple color */
+}
+
+.cat-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: var(--pink-primer); /* Purple underline */
+  transition: width 0.3s ease-in-out;
+}
+
+.cat-item:hover::after {
+  color: var(--pink-primer); /* Purple color on hover */
+  width: 100%;
+}
+.truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Adjust this number based on your needs */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid white;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .item-nav-mobile:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Background gelap saat di-hover */
+    border-radius: 30px;
+    height: 100%;
+  }
+  .custom-underline:hover::after {
+    width: 40px;
+    color: var(--pink-primer);
+  }
+  .nav-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+
+  .nav-menu-open {
+    max-height: 500px; /* Sesuaikan dengan kebutuhan, sebaiknya lebih besar dari konten navbar */
+    opacity: 1;
+  }
+
+  .item-nav-mobile {
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+
+  .nav-menu .item-nav-mobile {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .nav-menu-open .item-nav-mobile {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .nav-active::after {
+    width: 6%; /* Extend the underline to full width for active link */
+  }
+}
