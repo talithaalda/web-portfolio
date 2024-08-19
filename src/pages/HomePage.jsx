@@ -38,6 +38,24 @@ const HomePage = () => {
 
   return (
     <div className="bg-base-color relative overflow-hidden">
+      <div className="absolute top-0 right-0 z-0">
+        <img src="/images/ellipse6.png" alt="ellips" />
+      </div>
+      <div className="absolute top-0 left-0 z-0">
+        <img src="/images/ellipse8.png" alt="ellips" />
+      </div>
+      <div className="absolute md:top-96 top-[50%] left-0 z-0">
+        <img src="/images/ellipse7.png" alt="ellips" />
+      </div>
+      <div className="absolute md:hidden top-[30%] right-0 z-0">
+        <img src="/images/ellipse5.png" alt="ellips" />
+      </div>
+      <div className="absolute bottom-40 right-0 z-0">
+        <img src="/images/ellipse10.png" alt="ellips" />
+      </div>
+      <div className="absolute bottom-0 left-0 z-0">
+        <img src="/images/ellipse11.png" alt="ellips" />
+      </div>
       <NavbarComponents activeSection={activeSection} />
 
       {/* Content */}
