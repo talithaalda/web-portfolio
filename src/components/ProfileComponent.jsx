@@ -34,10 +34,16 @@ const ProfileComponent = () => {
               speed={50}
             />
           </div>
-          <div className="text-sm md:text-lg text-md text-pink-pale">
-            Lorem ipsum dolor sit amet consectetur. Interdum egestas nulla
-            integer sit tortor sit. Ultrices nec in mi ipsum massa diam elit non
-            neque.{" "}
+          <div className="text-sm md:text-md text-pink-pale">
+            I’m Talitha Alda Zafirah Dewi, a junior web developer with
+            passionate on{" "}
+            <span className="text-white">
+              front-end development, machine learning,
+            </span>
+            and <span className="text-white">UI/UX</span> design. With a passion
+            for front-end development, I create visually appealing and
+            <span className="text-white"> user-friendly interfaces</span> that
+            enhance the overall experience for users.
           </div>
           <div className="my-5 flex gap-4">
             <a href="https://linkedin.com/in/talithaaldazd">

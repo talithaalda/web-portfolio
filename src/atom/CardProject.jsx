@@ -24,7 +24,7 @@ const CardProject = ({ title, decs, tools, image, url }) => {
         <h2 className="card-title text-white text-[16px] lg:text-xl h-12">
           {title}
         </h2>
-        <p className="text-pink-pale text-xs lg:text-[16px] truncate-text ">
+        <p className="text-pink-pale text-xs lg:text-[16px] truncate-text leading-snug">
           {decs}
         </p>
         <div className="card-actions flex justify-start w-full mt-2 h-12">
