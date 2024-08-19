@@ -12,7 +12,7 @@ const CardProject = ({ title, decs, tools, image, url }) => {
   return (
     <motion.div
       ref={ref}
-      className="card bg-transparent max-w-[95vw] sm:max-w-[45vw] md:max-w-[35vw] lg:max-w-[25vw] xl:max-w-[25vw] shadow-xl border-[0.1px] border-pink-pale rounded-[30px] border-opacity-50 glow-effect hover:bg-[#F750CA] hover:bg-opacity-20 cursor-pointer transition-all duration-300"
+      className="card bg-transparent shadow-xl border-[0.1px] border-pink-pale rounded-[30px] border-opacity-50 glow-effect hover:bg-[#F750CA] hover:bg-opacity-20 cursor-pointer transition-all duration-300"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
       transition={{ duration: 0.5 }}

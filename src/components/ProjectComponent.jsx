@@ -8,7 +8,7 @@ import { FaEye } from "react-icons/fa";
 const ProjectComponent = () => {
   const [selectedId, setSelectedId] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("all"); // State for selected category
-
+  const categories = ["all", "website", "ml", "uiux"];
   // Filter projects based on the selected category
   const filteredProjects = projectList.filter(
     (project) =>
@@ -56,7 +56,7 @@ const ProjectComponent = () => {
           UI/UX
         </div>
       </div>
-      <div className="flex flex-wrap justify-center lg:gap-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-5">
         {filteredProjects.map((project) => (
           <motion.div
             key={project.id}
