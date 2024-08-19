@@ -68,6 +68,7 @@ const ProjectComponent = () => {
               decs={project.desc}
               tools={project.tools}
               image={project.image}
+              url={project.url}
             />
           </motion.div>
         ))}

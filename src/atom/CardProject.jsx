@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import { FaCode } from "react-icons/fa";
 // eslint-disable-next-line react/prop-types
-const CardProject = ({ title, decs, tools, image }) => {
+const CardProject = ({ title, decs, tools, image, url }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -39,6 +39,13 @@ const CardProject = ({ title, decs, tools, image }) => {
             ))}
           </div>
         </div>
+        <a href={url}>
+          <div className="card-actions justify-end hover:text-white underline underline-offset-2 text-lg">
+            <span>
+              <FaCode />
+            </span>
+          </div>
+        </a>
       </div>
     </motion.div>
   );
