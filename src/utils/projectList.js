@@ -13,7 +13,7 @@ export const projectList = [
     id: 2,
     title: "Waste Classification",
     desc: "A website designed to identify various types of waste, including plastic, paper, organic matter, metal, glass, and cardboard. Powered by TensorFlow, the platform offers an efficient way to classify waste types accurately.",
-    tools: ["TensorFlow", "HTML", "CSS", "JavaScript"],
+    tools: ["TensorFlow", "FlaskAPI", "Python", "JavaScript"],
     image: "/images/wasteclassification.png",
     category: "ml",
     url: "https://github.com/talithaalda/waste-classification-web-service",
