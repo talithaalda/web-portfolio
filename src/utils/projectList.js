@@ -53,7 +53,7 @@ export const projectList = [
     id: 6,
     title: "Re-desain Web Tiket Wisata Surabaya",
     desc: "The Surabaya Tourist Tickets website redesign project, crafted using Figma, aims to create a modern and user-friendly interface. The redesigned platform will enhance the booking experience for visitors, making it easier to explore and purchase tickets for Surabaya's top attractions.catering website that offers a wide selection of delicious, freshly prepared meals for various events and occasions. From personalized menus to professional delivery services.",
-    tools: ["Figma", "Bootstrap", "JavaScript"],
+    tools: ["Figma"],
     image: "/images/tiketwisatasurabaya.png",
     category: "uiux",
     url: "https://www.figma.com/design/w3sbI0psbRLTzcrTFWsvpr/Tiket-wisata?node-id=0-1&t=lteuWBrDhHtHsynt-1",
