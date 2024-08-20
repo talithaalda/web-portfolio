@@ -115,7 +115,7 @@ const ContactComponent = () => {
             </p>
             <div className="w-full flex lg:justify-start justify-center">
               <div className="flex flex-col gap-3">
-                <a href="linkedin.com/in/talithaaldazd">
+                <a href="https://linkedin.com/in/talithaaldazd">
                   <div className="flex flex-row items-center gap-2">
                     <div className="p-3 flex items-start rounded-full bg-[#540D6B] hover:bg-pink-primer">
                       <img
