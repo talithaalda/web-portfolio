@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 // eslint-disable-next-line react/prop-types
-const NavbarComponents = ({ activeSection }) => {
+const NavbarComponents = ({ activeSection, setActiveSection }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleNav = () => {
@@ -13,6 +13,7 @@ const NavbarComponents = ({ activeSection }) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id); // Update state immediately when clicked
     }
   };
 
@@ -43,7 +44,7 @@ const NavbarComponents = ({ activeSection }) => {
               <div className="item-nav-mobile">
                 <button
                   onClick={() => scrollToSection("profile")}
-                  className={`custom-underline flex text-lg text-white ${
+                  className={`custom-underline flex text-lg text-white rounded-md ${
                     activeSection === "profile" ? "nav-active" : ""
                   }`}
                 >

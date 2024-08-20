@@ -14,7 +14,7 @@ const HomePage = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Trigger when at least 50% of the section is visible
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -56,16 +56,23 @@ const HomePage = () => {
       <div className="absolute bottom-0 left-0 z-0">
         <img src="/images/ellipse11.png" alt="ellips" />
       </div>
-      <NavbarComponents activeSection={activeSection} />
+      <NavbarComponents
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
 
       {/* Content */}
       <div className="relative z-10">
         <div ref={(el) => (sectionRefs.current.profile = el)} id="profile">
           <ProfileComponent />
         </div>
+      </div>
+      <div className="relative z-20">
         <div ref={(el) => (sectionRefs.current.project = el)} id="project">
           <ProjectComponent />
         </div>
+      </div>
+      <div className="relative z-10">
         <div ref={(el) => (sectionRefs.current.skill = el)} id="skill">
           <SkillComponent />
         </div>

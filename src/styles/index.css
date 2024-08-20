@@ -102,17 +102,17 @@ body {
   left: 0;
   height: 3px;
   width: 0%;
-  background-color: var(--pink-primer); /* Purple underline */
+  background-color: var(--pink-primer);
   transition: width 0.3s ease-in-out;
 }
 
 .cat-item:hover::after {
-  color: var(--pink-primer); /* Purple color on hover */
-  width: 100%;
+  color: var(--pink-primer) !important;
+  width: 100% !important;
 }
 .truncate-text {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Adjust this number based on your needs */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -171,6 +171,6 @@ body {
     transform: translateY(0);
   }
   .nav-active::after {
-    width: 6%; /* Extend the underline to full width for active link */
+    width: 40%; /* Extend the underline to full width for active link */
   }
 }

@@ -92,7 +92,7 @@ const ProfileComponent = () => {
               className="w-[400px] sm:min-w-[200px] lg:w-[500px] object-cover rounded-full glow-effect"
             />
             <motion.div
-              className="absolute -top-0 -right-0 sm:px-9 sm:py-5 px-6 py-3 glow-effect sm:rounded-xl rounded-xs  hover:bg-[#d8a1de]"
+              className="absolute -top-0 -right-0 sm:px-9 sm:py-5 px-6 py-3 glow-effect rounded-xl  hover:bg-[#d8a1de]"
               initial="hidden"
               animate="visible"
               variants={popUpVariants}
