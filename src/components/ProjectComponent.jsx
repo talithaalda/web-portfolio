@@ -1,23 +1,23 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import CardProject from "../atom/CardProject";
-import { projectList } from "../utils/projectList";
-import TitleTextComponents from "../atom/TitleText";
-import { MdClose } from "react-icons/md";
-import { FaEye } from "react-icons/fa";
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import CardProject from '../atom/CardProject'
+import { projectList } from '../utils/projectList'
+import TitleTextComponents from '../atom/TitleText'
+import { MdClose } from 'react-icons/md'
+import { FaEye } from 'react-icons/fa'
 const ProjectComponent = () => {
-  const [selectedId, setSelectedId] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("all"); // State for selected category
-  const categories = ["all", "website", "ml", "uiux"];
+  const [selectedId, setSelectedId] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState('all') // State for selected category
+  const categories = ['all', 'website', 'ml', 'uiux']
   // Filter projects based on the selected category
   const filteredProjects = projectList.filter(
     (project) =>
-      selectedCategory === "all" || project.category === selectedCategory
-  );
+      selectedCategory === 'all' || project.category === selectedCategory
+  )
 
   const selectedProject = projectList.find(
     (project) => project.id === selectedId
-  );
+  )
 
   return (
     <div className="md:px-20 px-10 py-32 max-w-[1500px] mx-auto" id="project">
@@ -25,33 +25,33 @@ const ProjectComponent = () => {
       <div className="py-10 flex flex-row text-white justify-center md:gap-32 gap-5 sm:gap-10 sm:text-xl text-md">
         <div
           className={`cat-item ${
-            selectedCategory === "all" ? "cat-active" : ""
+            selectedCategory === 'all' ? 'cat-active' : ''
           }`}
-          onClick={() => setSelectedCategory("all")}
+          onClick={() => setSelectedCategory('all')}
         >
           All
         </div>
         <div
           className={`cat-item ${
-            selectedCategory === "website" ? "cat-active" : ""
+            selectedCategory === 'website' ? 'cat-active' : ''
           }`}
-          onClick={() => setSelectedCategory("website")}
+          onClick={() => setSelectedCategory('website')}
         >
           Website
         </div>
         <div
           className={`cat-item ${
-            selectedCategory === "ml" ? "cat-active" : ""
+            selectedCategory === 'ml' ? 'cat-active' : ''
           }`}
-          onClick={() => setSelectedCategory("ml")}
+          onClick={() => setSelectedCategory('ml')}
         >
           Machine Learning
         </div>
         <div
           className={`cat-item ${
-            selectedCategory === "uiux" ? "cat-active" : ""
+            selectedCategory === 'uiux' ? 'cat-active' : ''
           }`}
-          onClick={() => setSelectedCategory("uiux")}
+          onClick={() => setSelectedCategory('uiux')}
         >
           UI/UX
         </div>
@@ -123,15 +123,17 @@ const ProjectComponent = () => {
                           </div>
                         </a>
                       )}
-                      <a href={selectedProject.url}>
-                        <div className="p-3 flex items-center justify-center rounded-full inset-0 button-1">
-                          <img
-                            className=" w-4"
-                            src="/images/logo-github.png"
-                            alt="github"
-                          />
-                        </div>
-                      </a>
+                      {selectedProject.url && (
+                        <a href={selectedProject.url}>
+                          <div className="p-3 flex items-center justify-center rounded-full inset-0 button-1">
+                            <img
+                              className=" w-4"
+                              src="/images/logo-github.png"
+                              alt="github"
+                            />
+                          </div>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -141,7 +143,7 @@ const ProjectComponent = () => {
         </AnimatePresence>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectComponent;
+export default ProjectComponent
