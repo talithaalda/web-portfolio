@@ -17,7 +17,7 @@ export const projectList = [
     image: '/images/ChatApp.png',
     category: 'website',
     url: 'https://github.com/talithaalda/chat-room',
-    domain: '',
+    domain: 'https://letstalk.my.id/',
   },
   {
     id: 3,
